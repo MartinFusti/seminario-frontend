@@ -8,7 +8,7 @@ export const HomeScreen = () => {
         <View style={globalStyles.container}>
             <Text>¡Chequeá tus productos, antes de llevarlos!</Text>
             <CircleButton title="Camara" circleColor='#F17F16' circleSize='150' onPress={() => alert("Pressed")} />
-            <CircleButton title="Lupa" circleColor='#F17F16' circleSize='150' onPress={() => alert("Pressed")} />
+            <CircleButton title="Lupa" circleColor='#FB9F4B' circleSize='100' onPress={() => alert("Pressed")} />
         </View>
     );
 }
