@@ -1,10 +1,16 @@
 import React from "react";
 import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
 
-export const PrimaryButton = ({ title, onPress }) => {
+export const CircleButton = ({ title, circleColor, circleSize, onPress }) => {
+
+    const size = circleSize ? parseInt(circleSize) : 100;
+    const color = circleColor ? circleColor : 'white';
+
     return (
         <TouchableOpacity onPress={onPress}>
-            <View style={style.buttonBox}>
+            <View style={{
+                ...style.buttonBox, backgroundColor: color, height: size, width: size
+                }}>
             <Text style={style.buttonText}>{title}</Text>
             </View>
         </TouchableOpacity>
@@ -13,9 +19,7 @@ export const PrimaryButton = ({ title, onPress }) => {
 
 style = StyleSheet.create({
     buttonBox: {
-        backgroundColor: "red",
-        height: 80,
-        width: 80,
+        backgroundColor: "white",
         borderRadius: 100,
         borderColor: 'black',
         borderWidth: 1,
