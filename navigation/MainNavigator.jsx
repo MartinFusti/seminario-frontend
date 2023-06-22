@@ -1,13 +1,13 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import HomeScreen from "../screens/HomeScreen";
-import RegimenConfigScreen from "../screens/RegimenConfigScreen";
-import HistoryScreen from "../screens/HistoryScreen";
+import { HomeScreen } from "../screens/HomeScreen";
+import { RegimenConfigScreen } from "../screens/RegimenConfigScreen";
+import { HistoryScreen } from "../screens/HistoryScreen";
 
 const Tab = createBottomTabNavigator();
 
-const MainNavigator = () => {
+export const MainNavigator = () => {
     return (
             <Tab.Navigator>
                 <Tab.Screen name="Home" component={HomeScreen} />
@@ -16,5 +16,3 @@ const MainNavigator = () => {
             </Tab.Navigator>
     );
 }
-
-export default MainNavigator;
